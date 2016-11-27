@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 15:55:46 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/26 18:34:59 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/27 18:37:17 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "./Libft/libft.h"
 # include <stdio.h>
 
-# define BUFF_SIZE 32
+# define BUFF_SIZE 150
 
 /*
 typedef struct	s_line
