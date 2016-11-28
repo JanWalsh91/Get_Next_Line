@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/26 17:52:54 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/28 16:37:32 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/28 18:52:48 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,42 @@
 
 int	main(int ac, char **av)
 {
-	char	**line;
-	int		fd;
-	char	*string;
+	char	*line;
+	//int		fd;
+	int		fd2;
+	int		fd3;
 
-	line = &string;
-	if (ac != 2)
-		printf("Please enter the name of the file to open.\n");
-	if (!(fd = open(av[1], O_RDONLY)))
+	if (ac != 3)
+	{
+		printf("Please enter three files for the GNL test.\n");
 		return (0);
-	while (get_next_line(fd, line) != 0)
-		printf("------------------------------%s\n", *line);
-	close(fd);
+	}
+	//if (!(fd = open(av[1], O_RDONLY)))
+	//	return (0);
+	if (!(fd2 = open(av[1], O_RDONLY)))
+		return (0);
+	if (!(fd3 = open(av[2], O_RDONLY)))
+		return (0);
+	//while (get_next_line(fd, &line) != 0)
+	//{
+//		printf("----------------------------%i--%s\n", fd, line);
+//		free(line);
+//	}
+	//close(fd);
+	get_next_line(fd2, &line);
+	printf("fd2: %s\n", line);
+	free(line);
+	get_next_line(fd3, &line);
+	printf("fd3: %s\n", line);
+	free(line);
+	get_next_line(fd2, &line);
+	printf("fd2: %s\n", line);
+	free(line);
+	get_next_line(fd3, &line);
+	printf("fd3: %s\n", line);
+	free(line);
+	close(fd2);
+	close(fd3);
+
 	return (0);
 }
