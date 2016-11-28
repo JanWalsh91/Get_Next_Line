@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 15:57:42 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/27 18:37:22 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/28 16:39:45 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ int	read_file(t_list *p, char **line)
 		}
 		if (ret == 0)
 		{
-			//printf("ret == 0: end of file with buf: %s\n", p->content);
-			p->content = ft_strjoin(p->content, "\n");
-			//if (p->content)
-			//	free(p->content);
-			read_buf(p, line);
+			if (*(char *)p->content)//printf("ret == 0: end of file with buf: %s\n", p->content);
+			{
+				p->content = ft_strjoin(p->content, "\n");
+				return(read_buf(p, line));
+			}
 			return (0);
 		}
 		//printf("content copied: %s\n", p->content);

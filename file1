@@ -1,5 +1,9 @@
-hello.
+
+
+hello. (file starts with two empty lines)
 this is a test.
 This is the third line.
 This is the fourth line. its really looooooooooooooooooooooooooooooooooooooong.
-This is the lats line.
+This is the lats line. (file ends with two empty lines)
+
+
