@@ -6,7 +6,7 @@
 /*   By: jwalsh <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 15:55:46 by jwalsh            #+#    #+#             */
-/*   Updated: 2016/11/28 18:25:14 by jwalsh           ###   ########.fr       */
+/*   Updated: 2016/11/30 12:23:31 by jwalsh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define GET_NEXT_LINE_H
 
 # include "./Libft/libft.h"
-# include <stdio.h>
 
 # define BUFF_SIZE 150
 
