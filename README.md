@@ -11,7 +11,7 @@ Concepts covered:
 - memory manegement
 - ... and making sure segfaults never happen!
 
-Get_next_line returns the next ... line (you got it!) from a file, which is really useful for parsing files. The actual return value is 1 if a line has been read, 0 if the reading is completed or -1 if an error has occurred (oh no!).
+Get_next_line returns the next ... line (you got it!) from a file, which is really useful for parsing. The actual return value is 1 if a line has been read, 0 if the reading is completed or -1 if an error has occurred (oh no!).
 
 This get_next_line can handle multiple file descriptors and only uses one static variable (bonus challenges imposed on us at 42).
 
